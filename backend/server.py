@@ -10,6 +10,12 @@ api_key = "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"
 
 # Initialize the OpenAI API client
 openai.api_key = api_key
+from langchain.embeddings.openai import OpenAIEmbeddings
+from langchain.vectorstores import DeepLake
+
+os.environ["OPENAI_API_KEY"] = "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"
+activeloop_token = 'eyJhbGciOiJIUzUxMiIsImlhdCI6MTY5NTQ5NDY5MiwiZXhwIjoxNzI3MTE3MDg2fQ.eyJpZCI6InlnYW8ifQ.TRSWixYV991CCw2VqZ8QJN3yUmBsxQTyXmHZ661v7GM6rKGfLDyj1vW-wN0D5E79pSK1B7Ht-Ibdqg07iLugWw'
+os.environ["ACTIVELOOP_TOKEN"] = activeloop_token
 
 @app.route('/')
 def index():
@@ -18,71 +24,39 @@ def index():
 @app.route('/ask', methods=['POST'])
 def ask():
     user_question = request.form.get('user_question')
-    
     # Define the input prompt for the chat conversation
     input_prompt = f"What's your question? '{user_question}'"
-    ## read pdf
-    # Directory containing your PDF files
-    pdf_directory = './data/'
+    
+    #connect to deeplake to check embeddings
+    embeddings = OpenAIEmbeddings(disallowed_special=())
+    username = "ygao"  # replace with your username from app.activeloop.ai
+    db = DeepLake(
+    dataset_path=f"hub://{username}/divhacks23-2000",
+    read_only=True,
+    embedding_function=embeddings,)
 
-    # Get a list of all PDF files in the directory
-    pdf_files = [file for file in os.listdir(pdf_directory) if file.endswith('.pdf')]
+    retriever = db.as_retriever()
+    retriever.search_kwargs["distance_metric"] = "cos"
+    retriever.search_kwargs["fetch_k"] = 10
+    retriever.search_kwargs["maximal_marginal_relevance"] = True
+    retriever.search_kwargs["k"] = 5 #top 10 similar chunks
 
-    context_text = ""
-    # Loop through each PDF file and extract text
-    for pdf_file in pdf_files:
-        pdf_path = os.path.join(pdf_directory, pdf_file)
-        
-        # Creating a PDF reader object for the current PDF file
-        reader = PdfReader(pdf_path)
-        
-        # Printing the number of pages in the PDF file
-        print(f"Number of pages in '{pdf_file}': {len(reader.pages)}")
-        
-    # Loop through each page and extract text
-    for page_num, page in enumerate(reader.pages, 1):
-        text = page.extract_text()
-        context_text+= text
-        #print(f"Text from page {page_num} of '{pdf_file}':")
-        #print(text)
+    from langchain.chat_models import ChatOpenAI
+    from langchain.chains import ConversationalRetrievalChain
 
-    # Create a chat completion request
-    # response = openai.ChatCompletion.create(
-    #     model="gpt-4",  # Specify the model you want to use
-    #     messages=[
-    #         {"role": "system", "content": "You are a helpful assistant that translates English to French."},
-    #         {"role": "user", "content": input_prompt}
-    #     ]
-    # )
-    system_msg = """
-    You are a smart chatbot that is a CS advisor for Columbia students. You have access to the following information as context. Do not use external information and do not make up answers. Answer the  question to the best of your ability.
-    """ 
-    context = context_text
-    #user_input = "what classes should I take as if I want to do the Vision and Graphics track?"
-    prompt = f"""
-    #### SYSTEM MESSAGE ####
-    {system_msg}
-    #### SYSTEM MESSAGE DONE ####
-    #### CONTEXT PROMPT ####
-    {context}
-    ####USER PROMPT END###
-    #### USER PROMPT ####
-    {user_question}
-    ####USER PROMPT END###
+    model = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0.1)  # switch to 'gpt-4'
+    qa = ConversationalRetrievalChain.from_llm(model, retriever=retriever, return_source_documents=False) 
+    question = f"""You are a smart chatbot that is a CS advisor for Columbia students. You have access to the following 
+    information as context. Do not use external information and do not make up answers. Answer the  question to the best of your ability.
+    If you don't know the answer, just say "Hmm, I'm not sure." Your answer should be at 
+    least 100 words and no more than 300 words. This is the question you should answer: {input_prompt} \n 
     """
-
-    response = openai.ChatCompletion.create(
-    model="gpt-4",
-    messages=[{"role": "user", "content": prompt}],
-    temperature=1, #degree of randomness/creativity (1 being least random)
-    max_tokens=300, #to limit response length
-    top_p=0.5, #another parameter for randomness (1 being least random)
-    #frequency_penalty=0.26,
-    #presence_penalty=0.08
-    )
+    chat_history = []
+    result = qa({"question": question, "chat_history": chat_history})
+    response = result['answer']
 
     # Get the generated response
-    output = response['choices'][0]['message']['content']
+    output = response
 
     return jsonify({'response': output})
 
