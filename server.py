@@ -58,7 +58,7 @@ def ask():
     You are a smart chatbot that is a CS advisor for Columbia students. You have access to the following information as context. Do not use external information and do not make up answers. Answer the  question to the best of your ability.
     """ 
     context = context_text
-    user_input = "what classes should I take as if I want to do the Vision and Graphics track?"
+    #user_input = "what classes should I take as if I want to do the Vision and Graphics track?"
     prompt = f"""
     #### SYSTEM MESSAGE ####
     {system_msg}
@@ -67,7 +67,7 @@ def ask():
     {context}
     ####USER PROMPT END###
     #### USER PROMPT ####
-    {user_input}
+    {user_question}
     ####USER PROMPT END###
     """
 
