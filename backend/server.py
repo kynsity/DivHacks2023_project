@@ -47,9 +47,10 @@ def ask():
     model = ChatOpenAI(model_name="gpt-3.5-turbo",temperature=0.1)  # switch to 'gpt-4'
     qa = ConversationalRetrievalChain.from_llm(model, retriever=retriever, return_source_documents=False) 
     question = f"""You are a smart chatbot that is a CS advisor for Columbia students. You have access to the following 
-    information as context. Do not use external information and do not make up answers. Answer the  question to the best of your ability.
+    information as context. Do not use external information and do not make up answers. Answer the question to the best of your ability and try to be as specific as possible. 
+    Feel free to include relevant links.
     If you don't know the answer, just say "Hmm, I'm not sure." Your answer should be at 
-    least 100 words and no more than 300 words. This is the question you should answer: {input_prompt} \n 
+    least 100 words and no more than 300 words. This is the question you should answer: {input_prompt} \n
     """
     chat_history = []
     result = qa({"question": question, "chat_history": chat_history})
