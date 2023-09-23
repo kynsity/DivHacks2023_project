@@ -1,0 +1,282 @@
+.landing-page {
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.landing-page .div {
+  background: linear-gradient(180deg, rgb(31.02, 41.18, 81.81) 0%, rgb(59.85, 23.02, 69.06) 100%);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid;
+  border-color: #000000;
+  height: 982px;
+  overflow: hidden;
+  position: relative;
+  width: 1512px;
+}
+
+.landing-page .overlap {
+  height: 194px;
+  left: 105px;
+  position: absolute;
+  top: 272px;
+  width: 540px;
+}
+
+.landing-page .search-bar {
+  height: 29px;
+  left: 15px;
+  position: absolute;
+  top: 165px;
+  width: 430px;
+}
+
+.landing-page .lorem-ipsum-dolor {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 80px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 0;
+  width: 540px;
+}
+
+.landing-page .text-wrapper {
+  font-weight: 700;
+}
+
+.landing-page .span {
+  font-family: "Spline Sans Mono-Bold", Helvetica;
+  font-weight: 700;
+}
+
+.landing-page .p {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  left: 110px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 490px;
+  width: 576px;
+}
+
+.landing-page .overlap-group {
+  height: 601px;
+  left: 693px;
+  position: absolute;
+  top: 214px;
+  width: 838px;
+}
+
+.landing-page .frame {
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgb(136.35, 84.41, 155.83) 14.57%,
+    rgb(115.42, 116.56, 168.89) 36.7%,
+    rgb(92.23, 152.15, 183.35) 54%,
+    rgb(75.78, 177.41, 193.62) 65.94%,
+    rgb(58, 204.71, 204.71) 93.46%
+  );
+  border-radius: 20px;
+  height: 527px;
+  left: 177px;
+  mix-blend-mode: screen;
+  position: absolute;
+  top: 0;
+  width: 478px;
+}
+
+.landing-page .frame-2 {
+  background: linear-gradient(180deg, rgb(213, 126.73, 243.31) 0%, rgb(23.23, 36.01, 87.13) 100%);
+  border-radius: 200px;
+  height: 400px;
+  left: 10px;
+  position: absolute;
+  top: 201px;
+  width: 400px;
+}
+
+.landing-page .robot-img {
+  height: 325px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 10px;
+  width: 325px;
+}
+
+.landing-page .search-bar-2 {
+  background: linear-gradient(180deg, rgb(112.04, 74.6, 126.08) 0%, rgba(89, 67, 106, 0.5) 100%);
+  border: 4px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(136.35, 84.41, 155.83), rgba(109.88, 58.17, 129.27, 0)) 1;
+  border-radius: 10px;
+  height: 20px;
+  left: 438px;
+  position: absolute;
+  top: 478px;
+  width: 20px;
+}
+
+.landing-page .search-ba-3 {
+  background: linear-gradient(180deg, rgba(22, 136, 136, 0.28) 0%, rgb(21, 136, 136) 100%);
+  border: 4px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(26.02, 164.33, 164.33), rgba(21, 136, 136, 0)) 1;
+  border-radius: 21px;
+  height: 101px;
+  left: 341px;
+  position: absolute;
+  top: 46px;
+  width: 366px;
+}
+
+.landing-page .search-bar-4 {
+  background: linear-gradient(180deg, rgba(22, 136, 136, 0.28) 0%, rgb(21, 136, 136) 100%);
+  border: 4px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(26.02, 164.33, 164.33), rgba(21, 136, 136, 0)) 1;
+  border-radius: 10px;
+  height: 20px;
+  left: 321px;
+  position: absolute;
+  top: 142px;
+  width: 20px;
+}
+
+.landing-page .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 362px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 59px;
+  width: 331px;
+}
+
+.landing-page .student-img {
+  height: 325px;
+  left: 448px;
+  object-fit: cover;
+  position: absolute;
+  top: 253px;
+  width: 325px;
+}
+
+.landing-page .search-bar-5 {
+  background: linear-gradient(180deg, rgb(112.04, 74.6, 126.08) 0%, rgba(89, 67, 106, 0.5) 100%);
+  border: 4px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(136.35, 84.41, 155.83), rgba(109.88, 58.17, 129.27, 0)) 1;
+  border-radius: 21px;
+  height: 53px;
+  left: 280px;
+  position: absolute;
+  top: 363px;
+  width: 158px;
+}
+
+.landing-page .search-bar-6 {
+  background: linear-gradient(180deg, rgb(112.04, 74.6, 126.08) 0%, rgba(89, 67, 106, 0.5) 100%);
+  border: 4px solid;
+  border-color: transparent;
+  border-image: linear-gradient(to bottom, rgb(136.35, 84.41, 155.83), rgba(109.88, 58.17, 129.27, 0)) 1;
+  border-radius: 21px;
+  height: 53px;
+  left: 115px;
+  position: absolute;
+  top: 425px;
+  width: 323px;
+}
+
+.landing-page .text-wrapper-3 {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 131px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 439px;
+  width: 542px;
+}
+
+.landing-page .text-wrapper-4 {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 18px;
+  font-weight: 700;
+  left: 296px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 377px;
+  width: 542px;
+}
+
+.landing-page .text-wrapper-5 {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  left: 183px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 62px;
+}
+
+.landing-page .text-wrapper-6 {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 25px;
+  font-weight: 700;
+  left: 1287px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 76px;
+}
+
+.landing-page .div-wrapper {
+  background: linear-gradient(180deg, rgba(22, 136, 136, 0.28) 0%, rgb(21, 136, 136) 100%);
+  border-radius: 21px;
+  height: 93px;
+  left: 102px;
+  position: absolute;
+  top: 613px;
+  width: 333px;
+}
+
+.landing-page .text-wrapper-7 {
+  color: #ffffff;
+  font-family: "Source Code Pro-Bold", Helvetica;
+  font-size: 45px;
+  font-weight: 700;
+  left: 18px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 17px;
+}
+
+.landing-page .robot-head-top {
+  height: 60px;
+  left: 54px;
+  position: absolute;
+  top: 48px;
+  width: 113px;
+}
