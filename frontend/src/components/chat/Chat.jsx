@@ -1,4 +1,5 @@
 import React from "react";
+import BOT from "../../assets/robot_head.png"
 import "./chat.css";
 
 export const ChatPage = () => {
@@ -17,7 +18,7 @@ export const ChatPage = () => {
           <div className="text-wrapper-3">How can I help?</div>
           <img className="robot-chat-frame" alt="Robot chat frame" src="robot-chat-frame.svg" />
           <img className="robot-in-chat" alt="Robot in chat" src="robot-in-chat.png" />
-          <img className="robot-head-top" alt="Robot head top" src="robot-head-top.png" />
+          <img src={BOT} className="robot-head-img" />
         </div>
         <div className="overlap">
           <p className="text-wrapper-4">How many credits do I need to graduate?</p>

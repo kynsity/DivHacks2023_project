@@ -1,23 +1,44 @@
 .landing-page {
   background-color: rgba(255, 255, 255, 1);
+  font-family: 'Source Code Pro', monospace;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
 
+
 .landing-page .div {
   background: linear-gradient(180deg, rgb(31.02, 41.18, 81.81) 0%, rgb(59.85, 23.02, 69.06) 100%);
   background-color: rgba(255, 255, 255, 1);
   border: 1px solid;
   border-color: #000000;
-  height: 982px;
+  width: 100vw;
+  height: 100vw;
   overflow: hidden;
   position: relative;
-  width: 1512px;
 }
 
-.landing-page .overlap {
+.landing-page .logo {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+
+.landing-page .robot-head-img {
+  height: 45px;
+  position: absolute;
+}
+
+.landing-page #logo-text {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+
+.landing-page .landing-blurb {
   height: 194px;
   left: 105px;
   position: absolute;
@@ -33,38 +54,26 @@
   width: 430px;
 }
 
-.landing-page .lorem-ipsum-dolor {
+.landing-page #main-blurb {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
-  font-size: 80px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
+  font-size: 65px;
+  font-weight: 700;
+  left: 0px;
+  line-height: .95;
   position: absolute;
-  top: 0;
-  width: 540px;
+  /* top: 0; */
+  /* width: 540px; */
 }
 
-.landing-page .text-wrapper {
-  font-weight: 700;
-}
-
-.landing-page .span {
-  font-family: "Spline Sans Mono-Bold", Helvetica;
-  font-weight: 700;
-}
-
-.landing-page .p {
+.landing-page #summary {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: 500;
   left: 110px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
-  top: 490px;
+  top: 460px;
   width: 576px;
 }
 
@@ -127,7 +136,7 @@
   width: 20px;
 }
 
-.landing-page .search-ba-3 {
+.landing-page .search-bar-3 {
   background: linear-gradient(180deg, rgba(22, 136, 136, 0.28) 0%, rgb(21, 136, 136) 100%);
   border: 4px solid;
   border-color: transparent;
@@ -155,7 +164,6 @@
 
 .landing-page .text-wrapper-2 {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 18px;
   font-weight: 700;
   left: 362px;
@@ -203,7 +211,6 @@
 
 .landing-page .text-wrapper-3 {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 18px;
   font-weight: 700;
   left: 131px;
@@ -216,7 +223,6 @@
 
 .landing-page .text-wrapper-4 {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 18px;
   font-weight: 700;
   left: 296px;
@@ -229,7 +235,6 @@
 
 .landing-page .text-wrapper-5 {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 25px;
   font-weight: 700;
   left: 183px;
@@ -241,7 +246,6 @@
 
 .landing-page .text-wrapper-6 {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 25px;
   font-weight: 700;
   left: 1287px;
@@ -263,7 +267,6 @@
 
 .landing-page .text-wrapper-7 {
   color: #ffffff;
-  font-family: "Source Code Pro-Bold", Helvetica;
   font-size: 45px;
   font-weight: 700;
   left: 18px;
@@ -271,12 +274,4 @@
   line-height: normal;
   position: absolute;
   top: 17px;
-}
-
-.landing-page .robot-head-top {
-  height: 60px;
-  left: 54px;
-  position: absolute;
-  top: 48px;
-  width: 113px;
 }
