@@ -3,16 +3,47 @@ html {
   width: 100%;
 }
 
+#user_question{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 20px;
+  width: 600px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: white;
+}
+
 body {
   background: linear-gradient(180deg, rgb(31.02, 41.18, 81.81) 0%, rgb(59.85, 23.02, 69.06) 100%);
   background-color: rgba(255, 255, 255, 1);
   color: white;
-  font-family: 'Source Code Pro', monospace;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
 }
+
+#input-form{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#input-box{
+  left: 50%;
+}
+
+#header {
+  color: white;
+}
+
+#but{
+  height: 20px;
+  width: auto;
+}
+
+
   
 .chat-container {
   color: white;
@@ -36,9 +67,19 @@ body {
 }
 
 #chatbot {
-  border: 1px solid #eef1f5;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
+  color: white;
+  width: 1000px;
+  height: 500px;
+  margin-top: 50px;
+  background: linear-gradient(90deg, rgba(22, 136, 136, 0.28) 0%, #158888 100%) border-box;
+  border-radius: 15px;
+  font-family: 'Source Code Pro', monospace;
+
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+
 }
 
 message-container {
@@ -61,6 +102,8 @@ message-container {
 
 #response{
   color: white;
+  margin: 20px 30px 20px 30px;
+  text-align: left;
 }
 
 
@@ -89,10 +132,20 @@ button {
 }
 
 #robot-head {
+  /* display: flex; */
+  /* align-items: center; */
+  margin-top: 30px;
   height: 45px;
-  position: absolute;
-  left: 40px;
-  top: 40px;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#welcome {
+  font-family: 'Source Code Pro', monospace;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
 }
 
 #page-name {
