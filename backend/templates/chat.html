@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/chat.css')}}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>OpenAI Chatbot</title>
+</head>
+<body>
+
+    <div class = "chatbot-container">
+        <div id = 'header'>
+            <h1>Ask a Question</h1>
+        </div>
+        <div id = 'chatbot'>
+            <div id = 'conversation'>
+                <div class = 'chatbot-message'><p class = 'chatbot-text'>Hi! I'm CiCi. How can I help?</p></div>
+            </div>
+            <form id="input-form" method="POST" action="/ask">
+                <message-container>
+                    <input type="text" id="user_question" name="user_question" placeholder = 'Type here...'required>
+                    <input type = "submit" style="display: none"/>
+                    <button type="submit" id = "submit-button"></button>
+                </message-container>
+            </form>
+            <p id="response"></p>
+        </div>
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        
+    </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+
+            $(document).ready(function() {
+                $('#input-form').submit(function(event) {
+                    event.preventDefault();
+                    var userQuestion = $('#user_question').val();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/ask',
+                        data: {user_question: userQuestion},
+                        success: function(data) {
+                            $('#response').text(data.response);
+                        }
+                    });
+                });
+            });
+        </script>
+</body>
+</html>

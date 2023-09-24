@@ -1,0 +1,94 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background: linear-gradient(180deg, rgb(31.02, 41.18, 81.81) 0%, rgb(59.85, 23.02, 69.06) 100%);
+  background-color: rgba(255, 255, 255, 1);
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  background:
+    linear-gradient(90deg, rgba(22, 136, 136, 0.28) 0%, #158888 100%) padding-box,
+    linear-gradient(90deg, rgba(22, 136, 136, 0.28) 0%, #158888 100%) border-box;
+  border: 3px solid transparent;
+  border-radius: 15px;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  transition: 1s all ease;
+}
+
+button:hover {
+  background:
+    linear-gradient(90deg, rgba(22, 136, 136, 0.28) 0%, #158888 100%) padding-box,
+    linear-gradient(180deg, rgba(22, 136, 136, 0.28) 0%, #158888 100%) border-box;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+#robot-head {
+  height: 45px;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+
+#page-name {
+  position: absolute;
+  left: 140px;
+  top: 20px;
+}
+
+.site-info {
+  width: 500px;
+  position: absolute;
+  top: 200px;
+  left: 80px;
+}
+
+#title-blurb {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: .9;
+  margin-bottom: 0px;
+}
+
+#sub-blurb {
+  font-weight: 400;
+  font-size: 18px;
+  width: 450px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  /* line-height: .9; */
+}
+
+#main-graphic {
+  width: 600px;
+  position: absolute;
+  left: 560px;
+  top: 210px;
+}
+
+#talk-button {
+  width: fit-content;
+  height: 60px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#lets-talk {
+  margin-right: 10px;
+  margin-left: 10px;
+}
