@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CiCi</title>
+  <link href="static/styles/landing.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <!-- <script src="{{url_for('static', filename='script.js')}}"></script> -->
+  <div class="header-container">
+    <div class="header-item">
+      <div id="header-img">
+        <img id="robot-head" src=static/robot_head.png>
+      </div>
+      <div id="header-title">
+        <h1 class="headers" id="page-name">CiCi</h1>
+      </div>
+    </div>
+  </div>
+
+  <div id="main-container">
+    <div class="site-info">
+      <p id="title-blurb">
+        CS advising made easy.
+      </p>
+      <p id="sub-blurb">
+        CS classes are hard. CS advising shouldn't be. Get answers to all your career questions from CiCi!
+      </p>
+      <form action="/chat" method="GET">
+        <button id="talk-button">
+          <div id="lets-talk">
+          Let's Talk!
+          </div>
+        </button>
+      </form>
+      
+    </div>
+    <div class="site-img">
+      <img id="main-graphic" src=static/main_graphic.png>
+    </div>
+  </div>
+
+</body>
+
+</html>
