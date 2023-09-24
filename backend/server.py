@@ -13,7 +13,7 @@ openai.api_key = api_key
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('landing.html')
 
 @app.route('/ask', methods=['POST'])
 def ask():
