@@ -16,7 +16,6 @@ os.environ["OPENAI_API_KEY"] = secrets_1.SECRET_KEY
 # Initialize the OpenAI API client
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
-#os.environ["OPENAI_API_KEY"] = "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"
 activeloop_token = secrets_1.TOKEN
 os.environ["ACTIVELOOP_TOKEN"] = activeloop_token
 
