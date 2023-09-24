@@ -63,6 +63,9 @@ def ask():
     If the question is related to prospective CS students FAQ, you can return this link as part of your answer: "https://www.cs.columbia.edu/education/undergraduate/prospectivefaq/"
     Return your answer in markdown format.
     This is the question you should answer: {input_prompt} \n 
+
+    If you don't know the answer, just say "Hmm, I'm not sure." Your answer should be at 
+    least 100 words and no more than 300 words. This is the question you should answer: {input_prompt} \n
     """
 
     chat_history = []
