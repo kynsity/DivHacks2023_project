@@ -2,7 +2,7 @@
 ### Columbia Advising Chatbot
 An AI powered chatbot to help Columbia CS students get their advising questions answered quick!
 
-[link to demo video](https://youtu.be/wf0PZxDWjAI)
+[link to demo video](https://youtu.be/wMQmq_cwxLE?si=-kDxpVf-M2GuODNI)
 
 [link to slides presentation](https://www.canva.com/design/DAFvT-iM7p4/boT1OEoTPTcmALlNhhcgng/edit?utm_content=DAFvT-iM7p4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
