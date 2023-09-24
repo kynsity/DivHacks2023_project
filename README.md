@@ -6,7 +6,7 @@ An AI powered chatbot to help Columbia CS students get their advising questions 
 
 [link to slides presentation](https://www.canva.com/design/DAFvT-iM7p4/boT1OEoTPTcmALlNhhcgng/edit?utm_content=DAFvT-iM7p4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-[link to devpost page] (https://devpost.com/software/columbia-advising-chatbot)
+[link to devpost page](https://devpost.com/software/columbia-advising-chatbot)
 
 NOTE: To use app you need to have access to an OpenAI API key and an Active Loop Deep Lake API key.
 
