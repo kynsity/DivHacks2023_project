@@ -14,8 +14,7 @@
 </head>
 
 <body>
-  <!-- <script src="script.js"></script>
-  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script> -->
+  <!-- <script src="{{url_for('static', filename='script.js')}}"></script> -->
   <div class="header-container">
     <div class="header-item">
       <div id="header-img">
@@ -35,11 +34,14 @@
       <p id="sub-blurb">
         CS classes are hard. CS advising shouldn't be. Get answers to all your career questions from CiCi!
       </p>
-      <button id="talk-button">
-        <div id="lets-talk">
-        Let's Talk!
-        </div>
-      </button>
+      <form action="/chat" method="GET">
+        <button id="talk-button">
+          <div id="lets-talk">
+          Let's Talk!
+          </div>
+        </button>
+      </form>
+      
     </div>
     <div class="site-img">
       <img id="main-graphic" src=static/main_graphic.png>
