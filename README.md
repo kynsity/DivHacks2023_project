@@ -1,5 +1,6 @@
 # DivHacks2023_project
 ### Columbia Advising Chatbot
+## Created by: Kylie Berg, Charles Liu, Anna Reis, and Eris Gao
 An AI powered chatbot to help Columbia CS students get their advising questions answered quick!
 
 [link to demo video](https://youtu.be/wMQmq_cwxLE?si=-kDxpVf-M2GuODNI)
