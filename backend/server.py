@@ -6,17 +6,17 @@ from langchain.chains import ConversationalRetrievalChain
 import os
 import openai
 import time
-import secrets_1
+import secrets_2
 
 
 app = Flask(__name__)
 # Set your OpenAI API key
-os.environ["OPENAI_API_KEY"] = secrets_1.SECRET_KEY
+os.environ["OPENAI_API_KEY"] = secrets_2.SECRET_KEY
 
 # Initialize the OpenAI API client
 openai.api_key = os.environ["OPENAI_API_KEY"]
 
-activeloop_token = secrets_1.TOKEN
+activeloop_token = secrets_2.TOKEN
 os.environ["ACTIVELOOP_TOKEN"] = activeloop_token
 
 # Initialize objects once when the app starts
